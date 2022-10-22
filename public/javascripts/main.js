@@ -1,3 +1,4 @@
+const socket = io('http://localhost:3000');
 function openStream() {
 	const config = { audio: false, video: true };
 	return navigator.mediaDevices.getUserMedia(config);
@@ -7,7 +8,6 @@ function playStream(idVideoTag, stream) {
 	video.srcObject = stream;
 	video.play();
 }
-// openStream().then((stream) => playStream('localStream', stream));
 const peer = new Peer();
 peer.on('open', (id) => $('#my-peer').append(id));
 $('#btnCall').click(() => {
