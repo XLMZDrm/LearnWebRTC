@@ -3,8 +3,9 @@ export function configIO(io) {
 	io.on('connection', (socket) => {
 		socket.on('NGUOI_DUNG_DANG_KY', (user) => {
 			const isExist = arrUserInfo.some(
-				(userInfo) => userInfo === user.username,
+				(userInfo) => userInfo.username === user.username,
 			);
+			console.log(isExist);
 			if (isExist) {
 				return socket.emit('DANG_KY_THAT_BAI');
 			}
