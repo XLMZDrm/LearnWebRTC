@@ -7,7 +7,7 @@
 import app from '../app.js';
 import debug from 'debug';
 const debugApp = new debug('learnwebrtc:server');
-import http from 'http';
+import { createServer } from 'http';
 import { Server } from 'socket.io';
 /**
  * Get port from environment and store in Express.
@@ -19,7 +19,8 @@ app.set('port', port);
 /**
  * Create HTTP server.
  */
-const server = http.Server(app);
+
+const server = createServer(app);
 
 /**
  * Listen on provided port, on all network interfaces.
