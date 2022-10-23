@@ -12,13 +12,23 @@
 </head>
 
 <body>
-  <h3 id="my-peer">Your ID: </h3>
-  <video id="localStream" width="300" controls></video>
-  <br /><br />
-  <video id="remoteStream" width="300" controls></video>
-  <br /><br />
-  <input type="text" placeholder="Remote ID" id="remoteId">
-  <button id="btnCall">Call</button>
+  <div id="chat">
+    <p>Online users: </p>
+    <ul id="ulUsers">
+    </ul>
+    <h3 id="my-peer">Your ID: </h3>
+    <video id="localStream" width="300" controls></video>
+    <br /><br />
+    <video id="remoteStream" width="300" controls></video>
+    <br /><br />
+    <!-- <input type="text" placeholder="Remote ID" id="remoteId">
+    <button id="btnCall">Call</button> -->
+  </div>
+  <div id="signup">
+    <br>
+    <input type="text" placeholder="Enter your username" id="txtUsername">
+    <button id="btnSignup">Sign up</button>
+  </div>
 </body>
 <script src="/javascripts/main.js"></script>
 
