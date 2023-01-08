@@ -1,3 +1,3 @@
 # LearnWebRTC
 
-`const author = "drm"`
+`const author = "REdirect"`
